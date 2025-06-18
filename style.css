@@ -1,0 +1,122 @@
+/* Basic styling for a password form */
+
+body {
+    background: #f5f7fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 350px;
+    margin: 80px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 28px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 15px;
+}
+
+input[type="password"], input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 18px;
+    transition: border 0.2s;
+    background: #f9fafb;
+}
+
+input[type="password"]:focus, input[type="text"]:focus {
+    border-color: #2563eb;
+    outline: none;
+    background: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 10px 0;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+.error-message {
+    color: #dc2626;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    display: none;
+}
+
+.success-message {
+    color: #16a34a;
+    background: #dcfce7;
+    border: 1px solid #bbf7d0;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    display: none;
+}
+
+.password-strength {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #2563eb;
+    display: none;
+}
+
+.password-strength.weak {
+    color: #dc2626;
+}
+
+.password-strength.strong {
+    color: #16a34a;
+}
+
+/* Show/Hide password toggle button */
+.toggle-password {
+    position: absolute;
+    right: 18px;
+    top: 38px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    font-size: 18px;
+    padding: 0;
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 18px 8px;
+        max-width: 98vw;
+    }
+}
